@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB KELOMPOK 3</title>
+    <!--Link ke CSS-->
+    <link rel="stylesheet" href="style.css">
+    <!--link box icon-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Link Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <style>
+        .task-button {
+            background-color: #ff004f; /* Warna pink seperti pada gambar */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px auto;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .task-button:hover {
+            background-color: #ff3366; /* Warna hover lebih terang */
+        }
+
+        .task-section {
+            text-align: center; /* Posisi tengah untuk tombol */
+        }
+    </style>
+</head>
+<body>
+
+    <!--Home-->
+    <section class="home" id="home">
+        <div class="home-text container">
+            <!-- Added classes to h2 and span for animation -->
+            <h2 class="home-title animated-title">WEB KELOMPOK 3</h2>
+            <span class="home-subtitle animated-subtitle">Kelompok Web Dasar Kelas Sore</span>
+        </div>
+    </section>
+
+    <!--post filter-->
+    <div class="post-filter container">
+        <span class="filter-item active-filter" data-filter="Anggota">ANGGOTA KELOMPOK</span>
+    </div>
+
+    <!-- Kartu Anggota -->
+    <div class="slider-section">
+        <div class="body-slider">
+            <div class="container swiper">
+                <div class="slider-wrapper">
+                    <div class="card-list swiper-wrapper">
+                        <!-- Mirna -->
+                        <div class="card-item swiper-slide">
+                            <div class="card-content">
+                                <img src="images/mirna.jpeg" alt="User Image" class="user-image">
+                                <h2 class="user-name">MIRNA</h2>
+                                <p class="user-profession">43230273-SI</p>
+                            </div>
+                            <button class="message-btn" id="mirna-project">Project</button>
+                        </div>
+
+                        <!-- Andrian -->
+                        <div class="card-item swiper-slide">
+                            <div class="card-content">
+                                <img src="images/andrian.jpeg" alt="User Image" class="user-image">
+                                <h2 class="user-name">ANDRIAN</h2>
+                                <p class="user-profession">41236667-TI</p>
+                            </div>
+                            <button class="message-btn" id="andrian-project">Project</button>
+                        </div>
+
+                        <!-- Alfian -->
+                        <div class="card-item swiper-slide">
+                            <div class="card-content">
+                                <img src="images/alfian.jpeg" alt="User Image" class="user-image">
+                                <h2 class="user-name">ALFIAN</h2>
+                                <p class="user-profession">41236752-TI</p>
+                            </div>
+                            <button class="message-btn" id="alfian-project">Project</button>
+                        </div>
+
+                        <!-- Arif -->
+                        <div class="card-item swiper-slide">
+                            <div class="card-content">
+                                <img src="images/arif.jpeg" alt="User Image" class="user-image">
+                                <h2 class="user-name">ARIF</h2>
+                                <p class="user-profession">41236754-TI</p>
+                            </div>
+                            <button class="message-btn" id="arif-project">Project</button>
+                        </div>
+
+                        <!-- Betrian -->
+                        <div class="card-item swiper-slide">
+                            <div class="card-content">
+                                <img src="images/betran.jpeg" alt="User Image" class="user-image">
+                                <h2 class="user-name">BETRAN</h2>
+                                <p class="user-profession">41236682-TI</p>
+                            </div>
+                            <button class="message-btn" id="betrian-project">Project</button>
+                        </div>
+
+                        <!-- Nuryadi -->
+                        <div class="card-item swiper-slide">
+                            <div class="card-content">
+                                <img src="images/nuryadi.jpeg" alt="User Image" class="user-image">
+                                <h2 class="user-name">NURYADI</h2>
+                                <p class="user-profession">41236769-TI</p>
+                            </div>
+                            <button class="message-btn" id="nuryadi-project">Project</button>
+                        </div>
+
+                        <!-- Riska -->
+                        <div class="card-item swiper-slide">
+                            <div class="card-content">
+                                <img src="images/riska.jpeg" alt="User Image" class="user-image">
+                                <h2 class="user-name">RISKA</h2>
+                                <p class="user-profession">41236784-TI</p>
+                            </div>
+                            <button class="message-btn" id="riska-project">Project</button>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tombol Tugas Kelompok -->
+    <div class="task-section">
+        <a href="https://drive.google.com" target="_blank">
+            <button class="task-button">Tugas Kelompok</button>
+        </a>
+    </div>
+
+    <!-- Swiper JS Script Link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Custom JS Script Link -->
+    <script src="main.js"></script>
+
+    <!-- Copyright Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 ULA DUMUNG Corporation. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,314 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Poppins:ital,wght@0,300;0,400;0,600;0,800;0,900;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Global Styles for First Section */
+* {
+    font-family: 'Heebo', 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 1rem;
+    box-sizing: border-box;
+}
+
+:root {
+    --container-color: #1a1e21;
+    --second-color: #d5851c;
+    --text-color: #172317;
+    --bg-color: #fff;
+}
+
+::selection {
+    color: var(--bg-color);
+    background: var(--second-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding: 3rem 0 2rem;
+}
+
+.container {
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+
+/* Ensure footer is at the bottom */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    background-color: var(--container-color);
+    color: var(--bg-color);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+    width: 100%;
+    position: relative;
+}
+
+.footer .container {
+    max-width: 1068px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    background-color: var(--container-color);
+    padding: 18px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--second-color);
+}
+
+.Project {
+    padding: 8px 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 4px;
+    background: var(--second-color);
+    color: var(--bg-color);
+}
+
+.Project:hover {
+    background: hsl(63, 65%, 49%);
+    transition: 0.3s;
+}
+
+/* Home Section */
+.home {
+    background-image: url('images/fotbar.jpeg'); /* Path relatif menuju file GIF */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.home-text {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(255, 255, 255);
+}
+
+.home-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--bg-color);
+    margin-bottom: 1rem;
+}
+
+.home-subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* Animation Added */
+.animated-title {
+    animation: zoomIn 1s ease-out, bounce 2s ease infinite;
+}
+
+.animated-subtitle {
+    animation: fadeIn 2s ease-out forwards;
+}
+
+/* Keyframes for the animations */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Post Filter */
+.post-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2rem;
+    margin-top: 0.5rem !important;
+    font-size: 1.2rem;
+    padding: 1rem;
+    position: relative;
+    z-index: 100%;
+}
+
+/* Border and Text Styling for "ANGGOTA KELOMPOK" */
+.post-filter .filter-item {
+    padding: 10px 30px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    border: 3px solid var(--second-color);
+    border-radius: 10px;
+    background-color: var(--bg-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Slider Section */
+.slider-section {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url("images/luxury.jpg") #01062d no-repeat center;
+}
+
+.slider-wrapper {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 70px 55px;
+}
+
+/* Card Item Styling */
+.card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
+    background: #ffffff33;
+    border: 1px solid #ffffff80;
+}
+
+.card-content {
+    padding: 20px;
+    border: 2px solid #ffffff80;
+    border-radius: 10px;
+    background: var(--bg-color);
+    text-align: center;
+}
+
+.user-image {
+    width: 200px;
+    height: 200px; 
+    border-radius: 10px; 
+    margin-bottom: 20px;
+    border: 4px solid #fe0457;
+    padding: 4px;
+    object-fit: cover; 
+}
+
+.user-name {
+    font-size: 26px;
+    color: #000000; 
+    font-weight: 500;
+    margin-bottom: 0px; 
+}
+
+.user-profession {
+    font-size: 16px;
+    color: #000000; 
+    font-weight: 500;
+    margin: 0 0 50px; 
+}
+
+.message-btn {
+    font-size: 16px;
+    padding: 10px 35px;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    background: #fe0457;
+    border: 2px solid transparent;
+    transition: 0.5s;
+    margin-top: px; 
+    position: absolute;
+    bottom: 5px; 
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+.message-btn:hover {
+    background: #ffffff1a;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+/* Swiper Button */
+.swiper-pagination-bullet {
+    background: #fff;
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.swiper-slide-button {
+    color: #fff;
+    margin-top: -55px;
+    transition: 0.5s;
+}
+
+.swiper-slide-button:hover {
+    color: #fe0457;
+}
