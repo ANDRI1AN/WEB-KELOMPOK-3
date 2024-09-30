@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- AOS Library for animations -->
+    <link
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <title>Kelompok 3</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="bg-gray-900 sticky top-0 z-50">
+      <nav class="text-white w-11/12 md:container mx-auto py-4 flex justify-between items-center">
+        <a href="#" class="text-3xl font-bold">Ulapucuk</a>
+        <ul class="menu hidden md:flex space-x-6">
+          <li class="hover:text-gray-500 pl-6">
+            <a href="#Anggota">Anggota</a>
+          </li>
+          <li class="hover:text-gray-500">
+            <a href="#portofolio">Tugas Kelompok</a>
+          </li>
+          <li class="hover:text-gray-500">
+            <a href="#tentang">Tentang Kami</a>
+          </li>
+        </ul>
+        <button class="hamburger-menu text-3xl md:hidden">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-xmark hidden"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Section Baground -->
+    <section class="relative bg-cover bg-center h-screen" style="background-image: url('images/kartun.webp');">
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+
+      <div class="relative container mx-auto text-center text-white h-full flex items-center">
+        <div class="mx-auto w-3/4 md:w-2/4">
+          <h3 id="typing-title" class="text-5xl font-bold text-center mb-5"></h3>
+          <p id="typing-subtitle" class="text-gray-300 mb-5"></p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const titleText = "Selamat Datang Di Website Kelompok 3";
+      const subtitleText = "WEB RESMI KELOMPOK 3 KELAS SORE ANGKATAN 2023 STMIK IKMI CIREBON";
+
+      let titleIndex = 0;
+      let subtitleIndex = 0;
+
+      function typeTitle() {
+        if (titleIndex < titleText.length) {
+          document.getElementById("typing-title").innerHTML += titleText.charAt(titleIndex);
+          titleIndex++;
+          setTimeout(typeTitle, 100);
+        } else {
+          typeSubtitle();
+        }
+      }
+
+      function typeSubtitle() {
+        if (subtitleIndex < subtitleText.length) {
+          document.getElementById("typing-subtitle").innerHTML += subtitleText.charAt(subtitleIndex);
+          subtitleIndex++;
+          setTimeout(typeSubtitle, 50);
+        }
+      }
+
+      window.onload = typeTitle;
+    </script>
+
+    <!-- Anggota -->
+    <section id="Anggota" class="bg-gray-200 py-20">
+      <div class="w-11/12 md:container mx-auto">
+        <h3 class="text-5xl font-bold text-center mb-10" data-aos="fade-up">Anggota Kelompok</h3>
+        <div class="anggota-wrapper grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Anggota 1 -->
+          <div class="anggota-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex space-x-5 py-8 px-8 bg-white rounded-xl items-start">
+              <img src="images/alfian.jpeg" style="width: 200px; height: 200px;" />
+              <div>
+                <h4 class="text-2xl font-bold mb-0">Alfian Nurahmat</h4>
+                <h4 class="test-2xl font-sans mb-5 text-gray-600">41236752-TI</h4>
+                <p class="text-gray-500 mb-5">
+                  Hidup tanpa tujuan itu seperti jalan-jalan tanpa GPS. Boleh aja nyasar, tapi kalau kelamaan malah bingung sendiri. 
+                  Jadi.....
+                </p>
+                <a href="alfian.html" target="_blank" class="hover:text-gray-500">Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Anggota 2 -->
+          <div class="anggota-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex space-x-5 py-8 px-8 bg-white rounded-xl items-start">
+              <img src="images/betran.jpeg" style="width: 200px; height: 200px;" />
+              <div>
+                <h4 class="text-2xl font-bold mb-0">Betran Renaldi</h4>
+                <h4 class="test-2xl font-sans mb-5 text-gray-600">41236682-TI</h4>
+                <p class="text-gray-500 mb-5">
+                  Punya tubuh sehat itu nggak kalah penting dari punya muka glowing. 
+                  Mau kulit kinclong tapi badan tepar?.....
+                </p>
+                <a href="betran.html" target="_blank" class="hover:text-gray-500">Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Anggota 3 -->
+          <div class="anggota-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="flex space-x-5 py-8 px-8 bg-white rounded-xl items-start">
+              <img src="images/arif.jpeg" style="width: 200px; height: 200px;" />
+              <div>
+                <h4 class="text-2xl font-bold mb-0">Arif Firmansyah</h4>
+                <h4 class="test-2xl font-sans mb-5 text-gray-600">41236754-TI</h4>
+                <p class="text-gray-500 mb-5">
+                  Hidup itu lebih asyik kalau ditemani orang-orang yang ngerti kamu. 
+                  Teman yang ngajak makan pas kamu lagi stress itu.....
+                </p>
+                <a href="arif.html" target="_blank" class="hover:text-gray-500">Read more</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Anggota 4 -->
+          <div class="anggota-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="flex space-x-8 py-8 px-8 bg-white rounded-xl items-start">
+              <img src="images/nuryadi.jpeg" style="width: 200px; height: 200px;" />
+              <div>
+                <h4 class="text-2xl font-bold mb-0">Nuryadi</h4>
+                <h4 class="test-2xl font-sans mb-5 text-gray-600">41236769-TI</h4>
+                <p class="text-gray-500 mb-5">
+                  Jangan cuma nunggu waktu gajian tiba, coba terus belajar sesuatu yang baru. 
+                  Siapa tahu, dari belajar hal kecil.....
+                </p>
+                <a href="nuryadi.html" target="_blank" class="hover:text-gray-500">Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Anggota 5 -->
+          <div class="anggota-item" data-aos="fade-up" data-aos-delay="500">
+            <div class="flex space-x-8 py-8 px-8 bg-white rounded-xl items-start">
+              <img src="images/riska.jpeg" style="width: 200px; height: 200px;" />
+              <div>
+                <h4 class="text-2xl font-bold mb-0">Riska Yati Ningrum</h4>
+                <h4 class="test-2xl font-sans mb-5 text-gray-600">41236784-TI</h4>
+                <p class="text-gray-500 mb-5">
+                  Kadang kebahagiaan datang dari hal kecil yang nggak kamu sadari. 
+                  Bersyukur aja dari sekarang, nggak perlu nunggu punya segalanya.....
+                </p>
+                <a href="riska.html" target="_blank" class="hover:text-gray-500">Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Anggota 6 -->
+          <div class="anggota-item" data-aos="fade-up" data-aos-delay="600">
+            <div class="flex space-x-5 py-8 px-8 bg-white rounded-xl items-start">
+              <img src="images/mirna.jpeg" style="width: 200px; height: 200px;" />
+              <div>
+                <h4 class="text-2xl font-bold mb-0">Mirna Hera Riana</h4>
+                <h4 class="test-2xl font-sans mb-5 text-gray-600">43230273-SI</h4>
+                <p class="text-gray-500 mb-5">
+                  Nggak lucu kalau kamu jadi detektif akhir bulan, nyari-nyari kemana uang kamu hilang. Kelola dengan baik, 
+                  biar nggak kebingungan.....
+                </p>
+                <a href="mirna.html" target="_blank" class="hover:text-gray-500">Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Anggota 7 -->
+          <div class="anggota-item md:col-span-2 flex justify-center" data-aos="fade-up" data-aos-delay="700">
+            <div class="flex space-x-10 py-10 px-10 bg-white rounded-xl items-start justify-center" style="width: 600px; max-width: 600px;">
+              <img src="images/andrian.jpeg" style="width: 200px; height: 200px;" />
+              <div>
+                <h4 class="text-2xl font-bold mb-0">Andrian Maulana</h4>
+                <h4 class="test-2xl font-sans mb-5 text-gray-600">41236667-TI</h4>
+                <p class="text-gray-500 mb-5">
+                  Waktu jalan terus, dan nggak ada tombol rewind. Jadi, mumpung ada waktu, pake sebaik mungkin. 
+                  Jangan kebanyakan nunda, nanti.....
+                </p>
+                <a href="andrian.html" target="_blank" class="hover:text-gray-500">Read more</a>
+              </div>
+            </div>
+          </div>          
+        </div>
+      </div>
+    </section>
+
+    <!-- Kumpulan Tugas -->
+    <section id="portofolio" class="py-20 bg-white">
+      <h3 class="text-5xl font-bold text-center mb-5" data-aos="fade-up">Tugas Kelompok</h3>
+      <div class="flex justify-center w-11/12 mx-auto" data-aos="zoom-in">
+        <!-- Tugas 1-->
+        <div class="shadow-xl">
+          <a href="https://drive.google.com/file/d/1Z1wFGsio9imySkN_JT5v7wEgcCsqLqJl/view?usp=sharing" target="_blank">
+            <img src="images/pdf.webp" style="width: 100px; display: block; margin: 0 auto;" />
+            <div class="py-3 px-5">
+            <h4 class="text-center font-bold">Tugas Pra UTS</h4>
+         </div>
+        </a>
+    </div>
+
+      </div>
+    </section>
+
+    <!-- Tentang Kita -->
+<section id="tentang" class="w-11/12 md:container mx-auto py-20">
+  <div class="flex flex-col md:flex-row md:space-x-10 items-center md:items-start">
+    <img src="images/fotbar.jpeg" class="w-auto md:w-1/3 mb-5 md:mb-0" data-aos="fade-right" />
+    <div data-aos="fade-left" class="text-center md:text-left">
+      <h3 class="text-5xl font-bold mb-5">SIAPA KITA???</h3>
+      <p class="mb-5">
+        Kami adalah kelompok yang terbentuk di tahun 2024 dari mata kuliah Web Dasar Pemrograman. 
+        Dengan latar belakang yang beragam, kami bersatu dalam satu visi: memahami dan mengembangkan keterampilan dalam dunia pemrograman web. 
+        Kelompok kami berfokus untuk menguasai konsep-konsep dasar dalam pengembangan website, mulai dari HTML, CSS, hingga dasar-dasar JavaScript.
+      </p>
+      <p class="mb-5 pb-5 border-b border-gray-900">
+        Semangat kolaborasi dan inovasi adalah landasan utama dalam setiap tugas dan proyek yang kami kerjakan. 
+        Kami percaya bahwa kerja sama tim dan pembelajaran berkelanjutan adalah kunci untuk menjadi developer yang sukses di masa depan.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer class="py-5 text-center font-bold">&copy; 2024 Ulapucuk</footer>
+
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800, // Durasi animasi milidetik
+        once: true, // Animasi sekali
+      });
+
+      // Script untuk hamburger menu toggle
+      const hamburgerMenu = document.querySelector('.hamburger-menu');
+      const menu = document.querySelector('.menu');
+      const barsIcon = hamburgerMenu.querySelector('.fa-bars');
+      const xmarkIcon = hamburgerMenu.querySelector('.fa-xmark');
+
+      hamburgerMenu.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        barsIcon.classList.toggle('hidden');
+        xmarkIcon.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>
